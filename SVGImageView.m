@@ -172,14 +172,14 @@
 }
 
 
-- (PSVGColor *)fillColor { return _svgLayer.fillColor
-                                  ? [PSVGColor colorWithCGColor:_svgLayer.fillColor]
-                                  : nil; }
+- (nullable PSVGColor *)fillColor { return _svgLayer.fillColor
+                                           ? [PSVGColor colorWithCGColor:_svgLayer.fillColor]
+                                           : nil; }
 - (void)setFillColor:(PSVGColor * const)aColor { _svgLayer.fillColor = aColor.CGColor; }
 
-- (PSVGColor *)strokeColor { return _svgLayer.strokeColor
-                                    ? [PSVGColor colorWithCGColor:_svgLayer.strokeColor]
-                                    : nil; }
+- (nullable PSVGColor *)strokeColor { return _svgLayer.strokeColor
+                                             ? [PSVGColor colorWithCGColor:_svgLayer.strokeColor]
+                                             : nil; }
 - (void)setStrokeColor:(PSVGColor * const)aColor { _svgLayer.strokeColor = aColor.CGColor; }
 
 - (CGSize)sizeThatFits:(CGSize)aSize
